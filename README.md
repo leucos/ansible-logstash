@@ -1,5 +1,5 @@
 ansible-logstash role
-===============
+=====================
 
 This role installs logstash.
 
