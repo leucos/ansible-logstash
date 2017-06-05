@@ -6,7 +6,7 @@ This role installs logstash.
 Variables
 ----------
 
-None
+- `logstash_plugins`: plugin list to install (default: [])
 
 Tests
 -----
