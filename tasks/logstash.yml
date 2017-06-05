@@ -1,0 +1,18 @@
+- name: Adds repository key
+  apt_key:
+    url: '{{ logstash_repo_key }}'
+    state: present
+
+- name: Adds repos
+  apt_repository:
+    repo: "{{ logstash_repo_path }}"
+    update_cache: yes
+
+- name: Installs logstash
+  apt:
+    pkg: logstash
+    state: present
+
+- name: Installs plugins
+  command: /opt/logstash/bin/logstash-plugin install {{ item }}
+  with_items: "{{ logstash_plugins }}"

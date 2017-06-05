@@ -1,0 +1,9 @@
+# Choose version
+logstash_version: 5.x # or 2.x, 3.x
+
+# Plugins
+logstash_plugins: []
+
+# Repo
+logstash_repo_path: "deb https://artifacts.elastic.co/packages/{{ logstash_version }}/apt stable main"
+logstash_repo_key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
