@@ -14,5 +14,5 @@
     state: present
 
 - name: Installs plugins
-  command: /opt/logstash/bin/logstash-plugin install {{ item }}
+  command: /usr/share/logstash/bin/logstash-plugin install {{ item }}
   with_items: "{{ logstash_plugins }}"
